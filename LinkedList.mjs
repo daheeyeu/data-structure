@@ -49,9 +49,9 @@ class LinkedList{
             currentNode.next = newNode; //currentNode가 새로운 노드를 가리킨다
         }
         this.count++; //if문(가장 앞에 삽입할 때)과 else문(그 외 나머지 위치에 삽입할 때) 다음에 count++를 해줘서 이 연결리스트에 데이터의 수(count)가 하나 늘어났다고 기록
-    }
 }
-insertLast(data){
-    this.insertAt(this.count,data);//insertAt를 호출해서 index에 리스트의 크기인 count를 넣어 가장 뒤에 데이터를 삽입
+    insertLast(data){
+        this.insertAt(this.count,data);//insertAt를 호출해서 index에 리스트의 크기인 count를 넣어 가장 뒤에 데이터를 삽입
+    }
 }
 export {Node, LinkedList};
