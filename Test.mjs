@@ -12,7 +12,7 @@ console.log(node1.next.data);
 console.log(node1.next.next.data);
 
 let list = new LinkedList();
-console.log("======insertAt() 다섯 번 호출=======");
+console.log("==== insertAt() 다섯 번 호출====");
 list.insertAt(0,0);
 list.insertAt(1,1);
 list.insertAt(2,2);
@@ -29,3 +29,25 @@ list.insertLast(0);
 list.insertLast(1);
 list.insertLast(2);
 list.printAll();
+
+console.log("==== deleteAt() 호출 =====");
+list.deleteAt(0);
+list.printAll();
+list.deleteAt(1);
+list.printAll();
+
+console.log("==== deleteLast()호출 ====");
+list.insertLast(5); // 현재 리스트에는 데이터가 1개뿐이라 삽입
+list.deleteLast();
+list.deleteLast();
+list.printAll();
+
+console.log("==== getNodeAt()호출 ====");
+list.insertLast(1);//현재 리스트가 비어 있으므로 데이터 넣어주기
+list.insertLast(2);
+list.insertLast(3);
+list.insertLast(4);
+list.insertLast(5);
+
+let secondNode = list.getNodeAt(2);
+console.log(secondNode);
